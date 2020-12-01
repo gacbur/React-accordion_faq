@@ -36,22 +36,16 @@
 }
 
 .ilustration-woman{
-  height: 100%;
-  width: 100%;
-  background: url(./images/illustration-woman-online-desktop.svg);
-  background-size: 450px;
-  background-repeat: no-repeat;
-  background-position: -65px 50px;
+  position: absolute;
+  top:50px;
+  left: -80px;
+  height: 75%;
 }
 
 .ilustration-cube{
   position: absolute;
-  height: 100%;
-  width: 50%;
-  background: url(./images/illustration-box-desktop.svg);
-  background-size: 190px;
-  background-repeat: no-repeat;
-  background-position: -90px 170px;
+  top:200px;
+  left:-100px
 }
 
 .faq{
@@ -143,6 +137,7 @@
   }
 
   .ilustration-cnt{
+    position: relative;
     min-height: 150px;
     width: 100%;
     background-size: 250px;
@@ -150,25 +145,19 @@
     background-position: 25px -100px;
   }
 
-  .ilustration-cube{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: url(./images/illustration-box-desktop.svg);
-    background-size: 95px;
-    background-repeat: no-repeat;
-    background-position: -10px 70px;
-  }
-
   .ilustration-woman{
     position: absolute;
-    top:-80px;
-    left:25px;
-    height: 35%;
-    width: 90%;
-    background: url(./images/illustration-woman-online-desktop.svg);
-    background-size: 250px;
-    background-repeat: no-repeat;
+    top:-70px;
+    height: 125%;
+    left: 25px;
+  
+  }
+
+  .ilustration-cube{
+    position: absolute;
+    height: 60%;
+    top:0px;
+    left:20px
   }
 
   .faq h1{

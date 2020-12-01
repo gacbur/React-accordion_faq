@@ -20,15 +20,15 @@
   display: flex;
   flex-direction: row;
   border-radius: 2.2em;
-  height: 480px;
+  min-height: 480px;
   width:800px;
   box-shadow: 0px 20px 35px rgba(0,0,0,0.35);
   background-color: white;
 }
 
 .ilustration-cnt{
-  height: 100%;
   width: 50%;
+  min-height: 500px;
   background: url(./images/bg-pattern-desktop.svg);
   background-size: 950px;
   background-repeat: no-repeat;
@@ -46,9 +46,8 @@
 
 .ilustration-cube{
   position: absolute;
-  z-index: 1000;
   height: 100%;
-  width: 100%;
+  width: 50%;
   background: url(./images/illustration-box-desktop.svg);
   background-size: 190px;
   background-repeat: no-repeat;
@@ -56,19 +55,21 @@
 }
 
 .faq{
-  outline: 1px solid green;
   padding:2.5em 2em;
   display: flex;
   flex-direction: column;
   width:50%;
-  height: 100%;
+}
+
+.faq h1{
+  padding-left: .5em;
+  padding-top:.5em;
 }
 
 .accordion-cnt{
   padding:1em 1em;
   width:100%;
   padding-top: 3em;
-  outline:solid 1px red;
 }
 
 .accordion-items{
@@ -76,12 +77,115 @@
   flex-direction: column;
 }
 
+.accordion-item{
+  padding: .2em;
+  margin:.5em 0em;
+  border-bottom:1px solid hsl(240, 5%, 91%);
+}
+
 .accordion-item-header{
   display: flex;
 }
 
 .accordion-item-header h6{
+  font-weight: 500;
   flex-grow: 1;
   font-size: 14px;
 }
 
+.accordion-item-header h6.active{
+  transition: .2s;
+  font-weight: 700;
+}
+
+.accordion-item-header img{
+  width:4.5%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.accordion-item-header{
+  transition: .2s;
+  cursor: pointer;
+  padding:.3em 0em;
+}
+
+.accordion-item-header:hover{
+  transition: .2s;
+  color:hsl(14, 88%, 65%);
+}
+
+.accordion-item-header .arrow{
+  transition: .3s;
+}
+.accordion-item-header .arrow.rotate{
+  transform: rotateZ(-180deg);
+  transition: .3s;
+}
+
+.accordion-item-ans{
+  transition: .3s;
+  padding:.3em 0em;
+  font-size: 12px;
+}
+
+@media all and (max-width:850px){
+
+  .app{
+    padding: 6em 0em 2em 0em;
+  }
+
+  .box-cnt{
+    min-height: 550px;
+    width: 300px;
+    flex-direction: column;
+  }
+
+  .ilustration-cnt{
+    min-height: 150px;
+    width: 100%;
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position: 25px -100px;
+  }
+
+  .ilustration-cube{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url(./images/illustration-box-desktop.svg);
+    background-size: 95px;
+    background-repeat: no-repeat;
+    background-position: -10px 70px;
+  }
+
+  .ilustration-woman{
+    position: absolute;
+    top:-80px;
+    left:25px;
+    height: 35%;
+    width: 90%;
+    background: url(./images/illustration-woman-online-desktop.svg);
+    background-size: 250px;
+    background-repeat: no-repeat;
+  }
+
+  .faq h1{
+    text-align: center;
+    padding-top:0em;
+  }
+
+  .faq{
+    padding:1em .8em;
+    display: flex;
+    flex-direction: column;
+    width:100%;
+  }
+
+  .accordion-cnt{
+    padding:1em 1em;
+    width:100%;
+    padding-top: 3em;
+  }
+
+}

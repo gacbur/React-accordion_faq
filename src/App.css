@@ -124,6 +124,7 @@
 }
 
 .accordion-item-ans{
+  color: hsl(240, 6%, 50%);
   transition: .3s;
   padding:.3em 0em;
   font-size: 12px;

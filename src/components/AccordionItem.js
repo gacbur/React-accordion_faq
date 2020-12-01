@@ -19,10 +19,9 @@ const AccordionItem = ({ faqItem }) => {
                 <h6 className={isOpen ? 'active' : ''}>{faqItem.question}</h6>
                 <img className={`arrow ${isOpen ? 'rotate' : ''}`} src={iconarrowdown} alt="accordion-item"></img>
             </div >
-            {
-                isOpen ? <div className="accordion-item-ans">
-                    {faqItem.answer}
-                </div> : null}
+            <div className={`accordion-item-ans ${isOpen ? 'show' : 'not-show'}`} >
+                {faqItem.answer}
+            </div>
 
         </div >
     );
